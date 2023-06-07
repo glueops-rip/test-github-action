@@ -1,0 +1,13 @@
+name: Publish Docker image to GitHub Container Registry
+ 
+on:
+  push:
+  release:
+    types: [published]
+
+jobs:
+  push_to_registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build, Tag and Push Docker Image to GHCR
+        uses: GlueOps/github-actions-build-push-containers@v0.1.1
