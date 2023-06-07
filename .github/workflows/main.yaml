@@ -1,6 +1,9 @@
 name: Publish Docker image to GitHub Container Registry
  
-on: [push]
+on:
+  push:
+  release:
+    types: [published]
 
 jobs:
   push_to_registry:
